@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keylogger Control</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Keylogger Control Panel</h1>
+        <p>Current status: {{ 'Active' if active else 'Inactive' }}</p>
+        <form action="{{ url_for('start') }}" method="POST">
+            <button type="submit" class="btn" {{ 'disabled' if active else '' }}>Start Keylogger</button>
+        </form>
+        <form action="{{ url_for('stop') }}" method="POST">
+            <button type="submit" class="btn" {{ '' if active else 'disabled' }}>Stop Keylogger</button>
+        </form>
+        <br>
+        <a href="{{ url_for('logs') }}" class="btn">View Logs</a>
+    </div>
+</body>
+</html>

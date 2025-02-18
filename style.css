@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(138deg, rgb(115, 93, 142) 25.02%, rgb(22, 18, 26) 100.00%);;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Restrict the maximum width of the container */
+    max-height: 400px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+    word-wrap: break-word; /* Break long words to prevent overflow */
+    overflow-wrap: break-word;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 10px auto; /* Center the button horizontally */
+    border: none;
+    background: linear-gradient(to right, #434343 0%, black 100%);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    width: 50%; /* Button will take 50% of the container's width */
+    box-sizing: border-box;
+}
+
+.btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+pre {
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto; /* Add horizontal scroll if content overflows */
+    font-size: 14px;
+    max-height: 200px; /* Restrict the height of the log display */
+    height: 100%;
+    overflow-y: auto; /* Add vertical scroll for logs */
+}
+
+.btn:hover {
+    background: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+}
